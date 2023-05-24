@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.row1{
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    background-color: rgb(60, 59, 59);
+    color: whitesmoke;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+}
+.col1{
+    flex: 1;
+    padding-left: 40px;
+}
+.col2{
+    flex: 1;
+}
+.col3{
+    flex: 1;
+    padding-left: 40px;
+}
+.nav{
+    background-color: rgb(60, 59, 59);
+    color: whitesmoke;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+}
+.nav-title{
+    font-size: 30px;
+    justify-items: center;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    flex: 3;
+    list-style: none;
+
+}
+.a-nav{
+
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+.active{
+    color: #fff;
+    font-weight: bold;
+}
+.btn{
+    background-color:mediumturquoise;
+    color: white;
+    border: 1px solid black;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    box-shadow: 0px 1px 10px 1px rgba(0,1,1,1);
+}
+.row{
+
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-top:30px;
+    padding-left:50px;
+    font-family: "Roboto", sans-serif;
+
+}
+.col{
+    flex: 1;
+    justify-items: end;
+    margin: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.user-card {
+    width: 90%;
+    background-color: #fff;
+    border: 2px solid #999;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+.education-card {
+    width: 90%;
+    background-color: #fff;
+    border: 2px solid #999;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.card-header {
+    background-color: mediumturquoise;
+    height: 125px;
+    margin-bottom: 20px;
+}
+.education-header {
+    background-color: gray;
+    height: 30px;
+    margin-bottom: 20px;
+    color:#fff;
+    padding: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h1, 
+.card-body h2,
+.card-body h3,
+.card-body p {
+    margin: 20px 0px;
+}
+
+.avatar-m {
+    border-radius: 50%;
+    background-color: #fff;
+    height:100%;
+    padding: 5px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.imagen{
+    border-radius: 50%;
+    background-color: #fff;
+    height:50px;
+    padding: 5px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.icon-s {
+    height: 20px;
+}
+
+a {
+    color: #3a81e6;
+}
+
+header{
+    background-color: mediumaquamarine;
+}
+.icons{
+    width: 20px;
+}
