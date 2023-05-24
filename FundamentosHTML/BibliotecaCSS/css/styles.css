@@ -1,0 +1,71 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  /* Clase fixed-width container que se "autocentrará" a sí misma */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+body {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: 150px 0 150px 0;
+}
+
+a {
+    display: flex;
+    min-width: 275px;
+    padding: 25px 35px;
+    margin: 0 35px;
+    border-radius: 10px;
+    color: #53657D;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.btn-grey {
+    background: #e3edf7;
+}
+
+.btn-a {
+    background: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -15px;
+}
+.col {
+    background-color: aquamarine;
+    flex: 1;
+    padding: 0 15px;
+    margin: 15px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    background-color: #53657D;
+    color: #fff;
+}
+footer {
+    background-color: #53657D;
+    color: #fff;
+    padding: 25px 0;
+}
