@@ -26,7 +26,7 @@ function imprimeLaSecuencia() {
         }
     }
 }
-function Sigma() {
+function sigma() {
     console.log("Sigma de 1 a 100");
     let sum = 0;
     for (let i = 0; i <=100; i++) {
@@ -46,5 +46,5 @@ function factorial() {
 imprimirImpares();
 disminuirMultiplosDe3();
 imprimeLaSecuencia();
-Sigma();
+sigma();
 factorial();
