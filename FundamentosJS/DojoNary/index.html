@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <script src="./js/index.js"></script>
     <title>Dojonary</title>
 </head>
@@ -18,9 +19,67 @@
                 <input type="text" name="search" id="search" placeholder="Search">
             </div>
             <div class="header-login">
-                <button>Login</button>
+                <button onclick="login(this)">Login</button>
             </div>
         </header>
+        <main>
+            <div class="section-content">
+                <div class="card-principal">
+                    <div class="card">
+                        <div class="card-title">
+                            <h2>Ninja</h2>
+                            <h3>noun</h3>
+                            <p>Plural: ninjas</p>
+                        </div>
+                        <div class="card-content">
+                            <p>A practitioner skiller in the 
+                                <a href="#" class="href">Japanese</a> art of 
+                                <a href="#" class="href">ninjutsu</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-description">
+                        <div class="card-button">
+                            <button onclick="agregarLike(this)" class="button-like">13 Likes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-principal">
+                    <div class="card">
+                        <div class="card-title">
+                            <h2>Ninja</h2>
+                            <h3>noun</h3>
+                            <p>Plural: ninjas</p>
+                        </div>
+                        <div class="card-content">
+                            <p>A <a href="#" class="href">programmer</a> who
+                                breaks down problems with 
+                                <a href="#" class="href">zen</a>-like focus
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-description">
+                        <div class="card-button">
+                            <button onclick="agregarLike(this)" class="button-like">37 Likes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-lateral">
+                    <div class="card-principal">
+                        <div class="card">
+                            <div class="card-content">
+                                <h2>Dojonary is defined by</h2>
+                                <h1>YOU</h1>
+                            </div>
+                        </div>
+                            <div class="card-button2">
+                                <button onclick="eliminar(this)" class="button-add">Add Definiion</button>
+                            </div>
+                    </div>
+                    
+            </div>     
+        </main>
     </div>
 </body>
 </html>
