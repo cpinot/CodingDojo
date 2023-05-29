@@ -1,5 +1,5 @@
 function likes() {
-    var likes = document.querySelector(".btnLikes-button");
+    var likes = document.querySelector(".likeAmigo");
     console.log(likes);
     var likesNumber = parseInt(likes.innerHTML);
     likesNumber++;
