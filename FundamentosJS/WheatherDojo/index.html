@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Dojo Weather</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="titulo">
+                    <h1>Dojo Weather</h1>
+            </div>
+            <div class="links">
+                <ul class="link-ul">
+                    <li><a onclick="changeCity()" href="#">Burbank</a></li>
+                    <li><a onclick="changeCity()" href="#">Chicago</a></li>
+                    <li><a onclick="changeCity()" href="#">Dallas</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="informativa">
+                <div class="ciudad">
+                    <h2>San Jose</h2>
+                </div>
+                <div class="temperatura">
+                    <h3>Show temperature in </h3>
+                    <form class="form-temperatura">
+                        <select onchange="changeMetric(this)" name="temp" id="temp">
+                            <option value="celsius">C°</option>
+                            <option value="farenheit">F°</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="clima">
+                <!--tarjeta 1-->
+                <div class="tarjeta-clima">
+                    <div class="tarjeta-clima-titulo">
+                        <h3>Today</h3>
+                    </div>
+                    <div class="tarjeta-imagen">
+                        <img class="imagen"src="./images/some_rain.png" alt="some rain">
+                    </div>
+                    <div class="tarjeta-clima-subtitulo">
+                        <h4>some rain</h4>
+                    </div>
+                    <div class="tarjeta-temperatura">
+                        <spam class="max">24°</spam>
+                        <spam class="min">18°</spam>
+                    </div>
+                </div>
+                <!--tarjeta 2-->
+                <div class="tarjeta-clima">
+                    <div class="tarjeta-clima-titulo">
+                        <h3>Tomorrow</h3>
+                    </div>
+                    <div class="tarjeta-imagen">
+                        <img class="imagen"src="./images/some_sun.png" alt="some rain">
+                    </div>
+                    <div class="tarjeta-clima-subtitulo">
+                        <h4>some rain</h4>
+                    </div>
+                    <div class="tarjeta-temperatura">
+                        <spam class="max">27°</spam>
+                        <spam class="min">19°</spam>
+                    </div>
+                    <!--tarjeta 3-->
+                </div>
+                <div class="tarjeta-clima">
+                    <div class="tarjeta-clima-titulo">
+                        <h3>Friday</h3>
+                    </div>
+                    <div class="tarjeta-imagen">
+                        <img class="imagen"src="./images/some_clouds.png" alt="some rain">
+                    </div>
+                    <div class="tarjeta-clima-subtitulo">
+                        <h4>some rain</h4>
+                    </div>
+                    <div class="tarjeta-temperatura">
+                        <spam class="max">21°</spam>
+                        <spam class="min">16°</spam>
+                    </div>
+                </div>
+                <!--tarjeta 4-->
+                <div class="tarjeta-clima">
+                    <div class="tarjeta-clima-titulo">
+                        <h3>Saturday</h3>
+                    </div>
+                    <div class="tarjeta-imagen">
+                        <img class="imagen"src="./images/some_sun.png" alt="some rain">
+                    </div>
+                    <div class="tarjeta-clima-subtitulo">
+                        <h4>some rain</h4>
+                    </div>
+                    <div class="tarjeta-temperatura">
+                        <spam class="max">26°</spam>
+                        <spam class="min">21°</spam>
+                    </div>
+                </div>
+            </div>
+            <div class="cookies">
+                <div class="cookies-img">
+                    <img src="./images/cookie.png" alt="cookies">
+                </div>
+                <div class="cookies-texto">
+                    <div class="cookies-texto-titulo"><h3>Stop! Cookie time</h3></div>
+                    <div class="cookies-texto-descripcion">
+                        <p>We use cookies (sadly not edible ones) to personalize
+                            content and ads, to provide social media features and
+                            analyze our traffic. <a href="#">Read more...</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="cookies-boton">
+                    <button onclick="acceptCookies(this)"class="accept-btn">I accept</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
