@@ -14,3 +14,8 @@ fave_food2 = "pizza"
 print( "Amo comer {} y {}".format(fave_food1, fave_food2) ) # con .format()
 print( f"Amo comer {fave_food1} y {fave_food2}") # con una cadena f
 
+nombre_completo = "Jorge Andres Vargas Perez" 
+print(nombre_completo.upper())
+nombre = nombre_completo.split(" ")
+nombre_apellido= nombre[0] + " " + nombre[2]
+print(nombre_apellido)
