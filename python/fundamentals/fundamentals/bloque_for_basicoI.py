@@ -52,3 +52,11 @@ for x in range(lowNum,highNum+1):
         print(x)
 
 #imprimir separador
+x=[5,24,10,1,5]
+x+=[2]
+print(x)
+
+if ( not x):
+    print("no hay nada")
+else:
+    print("hay algo")
