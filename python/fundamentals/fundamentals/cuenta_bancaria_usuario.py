@@ -38,7 +38,6 @@ class Usuario:
         self.apellido = apellido
         self.edad = edad
         self.cuenta=CuentaBancaria()
-        
 
     def hacer_deposito(self, cantidad):
         self.cuenta.deposito(cantidad)
@@ -56,7 +55,9 @@ class Usuario:
         self.cantidad = cantidad
         self.cuenta -= cantidad
         usuario.cuenta += cantidad
-        return self
+
+
+
 
     
 usuario1 = Usuario("Jonatan", "Pereira", 25)
