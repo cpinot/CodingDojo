@@ -1,0 +1,32 @@
+
+select * from dojos;
+insert into dojos(name) values('Coding Dojos');
+insert into dojos(name) values('Digital House');
+insert into dojos(name) values('Codigo Facilito');
+delete from dojos where id !=0;
+insert into dojos(name) values('Coding Dojo');
+insert into dojos(name) values('Henry');
+insert into dojos(name) values('Desafio Latam');
+select * from ninjas;
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Cynthia','Pino',40,4);
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Juan','Lopez',20,4);
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Daphne','Meneses',18,4);
+
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Manuela','Carrera',25,5);
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Francisco','Peralta',28,5);
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Ernesto','Orozco',28,5);
+
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Camilo','Henriquez',48,6);
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Pedro','Hernandez',21,6);
+insert into ninjas (first_name, last_name, age, dojo_id) values ('Danila','Saez',19,6);
+
+select * from ninjas 
+join dojos on ninjas.dojo_id = dojos.id where dojos.id =4;
+
+select first_name, last_name, dojos.name from ninjas
+join  dojos on ninjas.dojo_id = dojos.id order by dojos.id desc
+limit 3;
+
+select dojos.name, first_name from ninjas
+join dojos on ninjas.dojo_id = dojos.id order by ninjas.dojo_id desc
+limit 1;
