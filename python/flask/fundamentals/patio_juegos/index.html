@@ -10,8 +10,8 @@
     <div class="conteiner">
         <h1>Bienvenidos!</h1>
         <div class="row">
-            {% for i in range(num) %}
-            <div class="card" style="background-color: '{{color}}';"></div>
+            {% for i in range(0,num) %}
+            <div class="card" style="background-color:{{ color }};"></div>
             {% endfor %}
         </div>
     </div>

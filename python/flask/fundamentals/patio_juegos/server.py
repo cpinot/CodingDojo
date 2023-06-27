@@ -7,11 +7,15 @@ def hola_mundo():
     return 'Hola Mundo!'  # Devuelve la cadena '¡Hola Mundo!' como respuesta
 @app.route('/play')
 def play():
-    return render_template("/index.html")
+    return render_template("index.html", num=3, color="cyan")
+
+@app.route('/play/<int:num>')
+def play_changes_num(num):
+    return render_template("index.html", num=num, color="blue")
 
 @app.route('/play/<int:num>/<string:color>')
-def play_changes():
-    return render_template("index.html", num=3, color="cyan")
+def play_changes_num_color(num,color):
+    return render_template("index.html", num=num, color=color)
 
 @app.errorhandler(404)
 def page_not_found(e):
