@@ -13,7 +13,18 @@ def success():
 @app.route('/say/<name>')
 def hello(name):
     print(name)
-    return "Hello " + name
+    return "Hello " + name.capitalize()
+
+@app.route('/repeat/<int:num>/<string:word>')
+def repeat_nombre(num, word):
+    imprime = ""
+    for i in range(num):
+        imprime += "Hola " + word.capitalize() + "<br>"
+    return imprime
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Lo Siento! No hay respuesta. intente otra vez."
 
 
 if __name__=="__main__":   # Asegúrate de que este archivo se esté ejecutando directamente y no desde un módulo diferente    
