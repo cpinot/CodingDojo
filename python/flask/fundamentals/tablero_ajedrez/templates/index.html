@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{ url_for('static',filename='styles/styles.css') }} rel="stylesheet" type="text/css">
+    <title>Tablero de Ajedrez</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Tablero de Ajedrez</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table>
+                    {% for i in range(num) %}
+                        <tr>
+                            {% for j in range(num2) %}
+                                {% if (i+j)%2 == 0 %}
+                                    <td class="white" style="background-color:{{color1}};"></td>
+                                {% else %}
+                                    <td class="black" style="background-color:{{color2}};"></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
