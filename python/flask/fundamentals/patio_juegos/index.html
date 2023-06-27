@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static',filename='styles/styles.css') }}" rel="stylesheet" type="text/css">
+    <title>Patio de Juegos</title>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Bienvenidos!</h1>
+        <div class="row">
+            {% for i in range(num) %}
+            <div class="card" style="background-color: '{{color}}';"></div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
