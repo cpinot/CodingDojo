@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.col {
+    flex: 50%;
+    padding: 0 10px;
+}
+h1 {
+    font-size: 26px;
+    text-align: center;
+}
