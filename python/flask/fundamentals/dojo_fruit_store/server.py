@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect
+from datetime import datetime
 app = Flask(__name__)  
 
 @app.route('/')         
@@ -8,7 +9,10 @@ def index():
 @app.route('/checkout', methods=['POST'])         
 def checkout():
     print(request.form)
-    return render_template("checkout.html")
+    fecha = datetime.now()
+    suma= int(request.form['strawberry']) + int(request.form['raspberry']) + int(request.form['apple'])
+    print(f"Cobrando a {request.form['first_name']} {request.form['last_name']} for {suma} fruits")
+    return render_template("checkout.html", suma=suma, fecha=fecha)
 
 @app.route('/fruits')         
 def fruits():
