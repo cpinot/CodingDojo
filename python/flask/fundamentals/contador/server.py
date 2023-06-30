@@ -15,9 +15,8 @@ def index():
 @app.route('/destroy_session')
 def destroy_session():
     session.clear()
-    session.pop('count')
 
-    return render_template("index.html", count=session['count'])
+    return redirect('/')
 
 if __name__=="__main__":   
     app.run(debug=True)    

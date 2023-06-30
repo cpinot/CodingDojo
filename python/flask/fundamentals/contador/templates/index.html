@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet" type="text/css">
     <title>Contador de Sesiones</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <h1>Contador de Sesiones</h1>
-            <p>{{count}}</p>
 
+            
 
         </div>
-
+        <div class="row">
+            <h2>{{count}}</h2>
+        </div>
+        <div class="botones">
+                <a class="btn" href="/">Click</a>
+                <a class="btn red" href="/destroy_session">Reiniciar</a>
+        </div>
     </div>
 </body>
 </html>
