@@ -1,0 +1,98 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: black;
+    margin: 0;
+    text-align: center;
+    
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+    height: 200px;
+    margin: 0 10px;
+    border-radius: 10px;
+    border: 1 px solid black;
+    background-color: #f2f2f2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 10px;
+    border: 1 px solid black;
+    background-color: mediumspringgreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+}
+.lightcoral{
+
+    background-color: lightcoral;
+    justify-content: center;
+}
+.lightgreen{
+    background-color: lightgreen;
+    justify-content: center;
+}
+.lightyellow{
+    background-color: lightyellow;
+    justify-content: center;
+}
+.lightblue{
+    background-color: lightblue;
+    justify-content: center;
+}
+.red{
+    justify-content: center;
+    background-color: red;
+    color: white;
+}
+.green{
+    background-color: rgb(15, 198, 15);
+    color:white;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: black;
+    margin: 0;
+    text-align: center;
+}
