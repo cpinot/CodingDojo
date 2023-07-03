@@ -80,7 +80,6 @@ h1 {
 }
 .green{
     background-color: rgb(15, 198, 15);
-    color:white;
     justify-content: center;
 }
 
@@ -94,5 +93,8 @@ p{
     font-size: 20px;
     color: black;
     margin: 0;
+    text-align: center;
+}
+form{
     text-align: center;
 }

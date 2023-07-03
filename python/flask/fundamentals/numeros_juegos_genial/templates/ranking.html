@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+    <title>Ranking</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Ranking</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Intentos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for ranking in ranking %}
+                        <tr>
+                            <td>{{ ranking.nombre}}</td>
+                            <td>{{ ranking.intentos}}</td>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <form action="/play_again" method="POST">
+                    <input type="submit" value="Jugar de nuevo">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

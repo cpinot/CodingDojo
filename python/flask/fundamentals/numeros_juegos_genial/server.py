@@ -40,8 +40,23 @@ def guess():
 
 @app.route('/play_again', methods=['POST'])
 def play_again():
-    session.clear()
+    session.pop('num_azar')
+    session.pop('resultado')
+    session.pop('count')
+
     return redirect('/')
+
+@app.route('/ranking', methods=['POST'])
+def ranking():
+    print(session['ranking'])
+    if 'ranking' not in session:
+        session['ranking'] = []
+        
+    session['ranking'] = [
+        dict(nombre=request.form['nombre'], intentos=session['count'])]
+    print(request.form['nombre'])
+    print(session['ranking'])
+    return render_template("ranking.html", ranking=session['ranking'])
 
 
 
