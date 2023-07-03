@@ -13,24 +13,29 @@ def index():
             session['resultado'] = ""
             session['count'] = 0
             print(session['num_azar'])
-        else:
-            print("la session ya existe")
-            print(session['num_azar']) 
+        elif 'num_azar' in session:
+            if session['count'] > 0 and session['count']<= 4:
+                print("la session ya existe")
+            elif session['count'] > 4 and session['resultado'] != 'igual':
+                session['resultado'] = "perdiste"
+        print(session['num_azar'])
         return render_template("index.html")
 
 
 @app.route('/guess', methods=['POST'])         
 def guess():
-        print(request.form)
-        session['count'] += 1
         numero_ingresado = int(request.form['numero'])
+        print(numero_ingresado)
         if session['num_azar'] == numero_ingresado:
                 session['resultado'] = "igual"
-        elif session['num_azar'] > numero_ingresado and session['num_azar']:
+                print('paso por igual')
+        elif session['num_azar'] > numero_ingresado:
                 session['resultado'] = "mayor"
-        elif session['num_azar'] < int(request.form['numero']):
+                print('paso por mayor')
+        elif session['num_azar'] < numero_ingresado:
                 session['resultado'] = "menor"
-        print(session['resultado'])
+                print('paso por menor')  
+        session['count'] += 1 
         return redirect('/')
 
 @app.route('/play_again', methods=['POST'])
