@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= stylesheet href= "{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Oro Ninja</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="title">Oro Ninja</h1>
+            
+            <div class="col center">
+                <h2 class="title2">Tu Oro: {{session['gold']}}</h2>
+                <h2 class="title2">N° Movimientos: {{session['count']}}</h2>
+            </div>
+                <form action="/reset" method="POST">
+                    <input type="hidden" name="action" value="farm">
+                    <input class="btn btn-primary" type="submit" value="Reiniciar Juego!" class="button">
+                </form>
+        </div>
+    </div>
+    <div class="container">
+
+            <div class="row">
+                <h1 class="title">FARM</h1>
+                
+                <div class="col center">
+                    <h2 class="title2">(Gana 10 - 20 oro)</h2>
+                </div>
+                <form action="/process_money" method="POST">
+                    <input type="hidden" name="action" value="farm">
+                    <input class="btn btn-primary" type="submit" value="Buscar Oro!" class="button">
+                </form>
+            </div>
+            <div class="row">
+                <h1 class="title">CAVE</h1>
+                
+                <div class="col">
+                    <h2 class="title2">(Gana 5 - 10 oro)</h2>
+                </div>
+                <form action="/process_money" method="POST">
+                    <input type="hidden" name="action" value="cave">
+                    <input class="btn btn-primary" type="submit" value="Buscar Oro!" class="button">
+                </form>
+            </div>
+            <div class="row">
+                <h1 class="title">HOUSE</h1>
+                
+                <div class="col">
+                    <h2 class="title2">(Gana 2 - 5 oro)</h2>
+                </div>
+                <form action="/process_money" method="POST">
+                    <input type="hidden" name="action" value="house">
+                    <input class="btn btn-primary" type="submit" value="Buscar Oro!" class="button">
+                </form>
+            </div>
+            <div class="row">
+                <h1 class="title">CASINO</h1>
+                
+                <div class="col">
+                    <h2 class="title2">(Gana 0 - 50 oro)</h2>
+                </div>
+                <form action="/process_money" method="POST">
+                    <input type="hidden" name="action" value="casino">
+                    <input class="btn btn-primary" type="submit" value="Buscar Oro!" class="button">
+                </form>
+            </div>
+        
+    </div>
+    <div class="container">
+        <div class="actividades">
+            <div class="col">
+            </div>
+            <div class="message">
+                <h2 class="title2">Actividades:</h2>
+                {% for actividad in session['actividades'] %}
+                    <p><span class="{{color}}">{{actividad}}</span></p>
+                {% endfor %}
+                
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
