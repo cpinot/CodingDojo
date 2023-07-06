@@ -13,18 +13,18 @@ def index():
 def desplegar():
     return render_template("crear.html")
 
-@app.route( "/nuevo/usuario", methods = ['GET, POST'] )
+@app.route( "/nuevo/usuario", methods = ['POST'] )
 def agregar_usuario():
     if request.form != None:
-        print(request.form("nombre"))
-    nuevo_usuario = {
+        print(request.form['first_name'])
+        nuevo_usuario = {
 
-            "first_name" : request.form("nombre"),
-            "last_name" : request.form("apellido"),
-            "email" :request.form("email")
-        }
-    User.crear_uno( nuevo_usuario )
-    return redirect( "/" )
+                "first_name" : request.form['first_name'],
+                "last_name" : request.form['last_name'],
+                "email" :request.form['email']
+            }
+        User.crear_uno( nuevo_usuario )
+        return redirect( "/" )
     
 if __name__ == "__main__":
     app.run(debug=True)
