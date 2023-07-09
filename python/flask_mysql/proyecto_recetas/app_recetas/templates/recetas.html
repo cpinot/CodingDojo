@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>App de recetas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Bienvenid@, {{session['usuario_nombre']}} {{session['usuario_apellido']}}</h2>
+                <h3>Listado de todas las recetas</h3>
+                <div class="logout">
+                    <form method="GET" action="/recetas/nueva"> 
+                        <button type="submit" class="btn btn-warning">Crear nueva receta</button>
+                    </form>
+                    <form method="GET" action="/logout">
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Under</th>
+                            <th scope="col">Posteado por</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for receta in recetas %}
+                        <tr>
+                            
+                            <th scope="row">{{receta.id}}</th>
+                            <td>{{receta.name}}</td>
+                            <td>{%if receta.under_30_minutes==True%}
+                                <span>Si</span>
+                                {%else%}
+                                <span>No</span>
+                                {%endif%}</td>
+                            </td>
+                            <td>{{receta.first_name}}</td>
+                            
+                            <td>
+                                <a href="/detalle/receta/{{receta.id}}">Detalle |</a>
+                                {% if session['usuario_id'] == receta.user_id: %}
+                                <a href="/editar/receta/{{receta.id}}">Editar |</a>
+                                {% endif %}
+                                {% if session['usuario_id'] == receta.user_id: %}
+                                <a href="/eliminar/receta/{{receta.id}}">Eliminar </a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

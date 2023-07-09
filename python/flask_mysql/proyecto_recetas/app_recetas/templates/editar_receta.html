@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Nueva Receta</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>Editar Receta</h2>
+            <div class="col-md-10">
+                    <div class="logout">
+                        <form method="GET" action="/recetas"> 
+                            <button type="submit" class="btn btn-warning">Volver a Recetas</button>
+                        </form>
+                        <form method="GET" action="/logout">
+                            <button type="submit" class="btn btn-primary">Logout</button>
+                        </form>
+                    </div>
+                <form action="/recetas/editar/{{session['usuario_id']}}" method="POST"class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" name="name" id="name" value="{{receta[0].name}}">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="date" class="form-label">Date Cooked Made</label>
+                        <input type="date" class="form-control" name="created_at" id="created_at" value="{{receta[0].created_at.strftime("%Y-%m-%d")}}">
+                    </div>
+                    <div class="col-6">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" name="description" id="description" rows="3">{{receta[0].description}}</textarea>
+                    </div>
+                    <div class="col-6">
+                        {%if receta[0].under_30_minutes == True%}
+                        <label for="under_30_minutes" class="form-label">Under 30 minutes?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="under_30_minutes" id="under_30_minutes" value="Yes"checked>
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="under_30_minutes" id="under_30_minutes" value="No">
+                                No
+                            </label>
+                        </div>
+                        {%else%}
+                        <label for="under_30_minutes" class="form-label">Under 30 minutes?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="under_30_minutes" id="under_30_minutes" value="Yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="under_30_minutes" id="under_30_minutes" value="No"checked>
+                                No
+                            </label>
+                        </div>
+                        {%endif%}
+                    </div>
+                    <div class="col-6">
+                        <label for="instructions" class="form-label">instructions</label>
+                        <textarea class="form-control" id="instructions" name="instructions" rows="3">{{receta[0].instructions}}</textarea>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

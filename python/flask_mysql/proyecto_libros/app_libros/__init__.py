@@ -1,6 +1,5 @@
 from flask import Flask
-from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
-DATA_BASE='recetas'
+DATA_BASE='libros'
 app.secret_key = "clave_secreta"
