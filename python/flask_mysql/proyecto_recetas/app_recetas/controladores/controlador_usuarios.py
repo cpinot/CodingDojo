@@ -37,7 +37,7 @@ def login_usuario():
             return redirect('/login')
 @app.route('/logout', methods=['GET'])
 def logout():
-    session['usuario_id'] = None
+    session.clear()
     return redirect('/login')
 
 

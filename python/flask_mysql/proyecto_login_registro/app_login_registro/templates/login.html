@@ -15,12 +15,6 @@
                 <div class="card-body p-5 text-center">
     
                 <h3 class="mb-5">Login</h3>
-                {% if session['usuario_id']!= None %}
-                <div class="alert alert-success" role="alert">
-                    <p>Usuario Ingresado Correctamente</p>
-                    <p>Para acceder, ingresa tus credenciales</p>
-                </div>
-                {% endif %}
                 <div class="form-outline mb-4">
                     {%for messages in get_flashed_messages()%}
                     <div class="alert alert-danger" role="alert">
