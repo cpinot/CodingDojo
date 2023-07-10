@@ -33,6 +33,14 @@ def login_usuario():
     else:
             print("el usuario no existe")
             return redirect('/login')
+    
+@app.route('/tablero', methods=['GET'])
+def desplegar_tablero():
+    if 'usuario_id' in session:
+        return render_template('tablero.html')
+    else:
+        return redirect('/login')
+    
 @app.route('/logout', methods=['GET'])
 def logout():
     session['usuario_id'] = None
