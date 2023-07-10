@@ -43,7 +43,7 @@ def desplegar_tablero():
     
 @app.route('/logout', methods=['GET'])
 def logout():
-    session['usuario_id'] = None
+    session.clear()
     return redirect('/login')
 
 
@@ -75,3 +75,5 @@ def nuevo_usuario():
             return redirect('/login' )
     else:
             return redirect('/register')
+    
+    
